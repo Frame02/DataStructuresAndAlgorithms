@@ -22,7 +22,7 @@ public class LinkedListSwapNodes {
         start = null;
     }
 
-    private void buildList(List<Integer> items) {
+    public void buildList(List<Integer> items) {
         start = null;
         Node<Integer> prev = null;
         for (Integer item : items) {
@@ -75,16 +75,16 @@ public class LinkedListSwapNodes {
         T item;
         Node<T> next;
 
-        public Node(T item) {
+        Node(T item) {
             this.item = item;
             next = null;
         }
 
-        public T getItem() {
+        T getItem() {
             return item;
         }
 
-        public Node<T> getNext() {
+        Node<T> getNext() {
             return next;
         }
     }
