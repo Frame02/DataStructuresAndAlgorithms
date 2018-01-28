@@ -17,4 +17,13 @@ public class SentenceReversalTest {
         String reversedSentence = sr.getSentence();
         assertEquals(reversedSentence, " In No. 1   pos");
     }
+
+    @Test
+    public void test02(){
+        String originalSentence = "position 1 no. @ durga is This";
+        SentenceReversal sr = new SentenceReversal(originalSentence);
+        sr.reverse();
+        String reversedSentence = sr.getSentence();
+        assertEquals(reversedSentence, "This is durga @ no. 1 position");
+    }
 }
