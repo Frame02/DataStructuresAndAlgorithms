@@ -17,11 +17,6 @@ public class Pyramid {
         this.n = n;
     }
 
-    public static void main(String[] args) {
-        Pyramid p = new Pyramid(15);
-        p.printPyramid();
-    }
-
     public void printPyramid() {
         // Iterate row by row
         for (int i = 1; i <= n; ++i) {
@@ -41,5 +36,10 @@ public class Pyramid {
             // Print a new line to proceed to next line/row
             System.out.println();
         }
+    }
+
+    public static void main(String[] args) {
+        Pyramid p = new Pyramid(15);
+        p.printPyramid();
     }
 }
