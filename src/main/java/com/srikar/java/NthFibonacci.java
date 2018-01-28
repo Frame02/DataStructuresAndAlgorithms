@@ -28,6 +28,18 @@ public class NthFibonacci {
         return nthFibonacci;
     }
 
+    // Calculating Fibonacci recursively (Inefficient)
+    public long calculateFibonacci(int n){
+        if(n == -1){
+            return -1;
+        }
+        if(n == 0){
+            return 1;
+        }
+        else
+            return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
+    }
+
     public int getN() {
         return n;
     }
@@ -38,7 +50,8 @@ public class NthFibonacci {
 
     public static void main(String[] args) {
         NthFibonacci nf = new NthFibonacci(30);
-        System.out.printf("%dth Fibonacci: %d", nf.getN(), nf.calculate());
+        System.out.printf("%dth Fibonacci: %d\n", nf.getN(), nf.calculate());
+        System.out.printf("%dth Fibonacci: %d\n", nf.getN(), nf.calculateFibonacci(nf.getN()));
     }
 }
 
