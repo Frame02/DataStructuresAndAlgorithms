@@ -16,8 +16,8 @@ public class LinkedListSorter {
 
      */
 
-    Node start;
-    Scanner scanner;
+    private Node start;
+    private Scanner scanner;
 
     public LinkedListSorter() {
         start = null;
@@ -30,7 +30,7 @@ public class LinkedListSorter {
         System.out.println("Sorted list: " + lls);
     }
 
-    public int getInput() {
+    private int getInput() {
         System.out.print("Enter item (enter '-1' to terminate input): ");
         return scanner.nextInt();
     }
@@ -62,8 +62,7 @@ public class LinkedListSorter {
                     a = a.next;
                 } while (a != null);
                 if (a == null){
-                    Node temp = new Node(i);
-                    prev.next = temp;
+                    prev.next = new Node(i);
                 }
             }
         }
@@ -80,7 +79,7 @@ public class LinkedListSorter {
         return sb.toString();
     }
 
-    class Node {
+    private class Node {
         int item;
         Node next;
 
